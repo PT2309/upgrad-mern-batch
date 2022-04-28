@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 
 // Creating an instance of express app.
 const app = express();

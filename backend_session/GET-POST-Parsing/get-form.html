@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Form page</title>
+    <style>
+      *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        font-size: 20px;
+      }
+      input{
+        margin:20px;
+        padding:10px;
+      }
+      input[type=”text”],
+      textarea {
+        width:200px;
+        margin:20px;
+        padding:5px;
+        height:30px;
+        display: block;
+      }
+      textarea{
+        resize:none;
+        height:60px;
+      }
+    </style>
+  </head>
+<body>
+  <form action='/process' method='GET'>
+    <input type='text' name='name' placeholder='name'/>
+    <textarea name='message' placeholder='message'></textarea>
+    <input type='submit'/>
+  </form>
+</body>
+</html>
