@@ -16,4 +16,5 @@ mongoose.connect(dBURI).then( res => {
 });
 
 app.use('/', require('./routes/register'));
+app.use('/', require('./routes/login'));
 

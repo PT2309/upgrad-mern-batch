@@ -6,8 +6,8 @@ const router = express.Router();
 router.post('/register', async (req, res)=> {
     const user = req.body;
 
-    const takenUsername = await User.find({ username: user.username});
-    const takenEmail = await User.find({ email: user.email});
+    const takenUsername = await User.findOne({ username: user.username});
+    const takenEmail = await User.findOne({ email: user.email});
 
     if( takenUsername || takenEmail){
         res.json({ message: 'User already taken'});
@@ -20,8 +20,8 @@ router.post('/register', async (req, res)=> {
             password: hash,
         })
 
-        dbUser.save();
-        res.statusCode(201).json({ message: 'registration Successful'});
+        dbUser.save()
+        res.json({ message: 'registration Successful'});
     }
 })
 
